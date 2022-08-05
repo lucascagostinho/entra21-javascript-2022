@@ -1,74 +1,74 @@
 $("#update").hide();
-var pessoas = [];
+var people = [];
 var update = null;
-escreverTabela();
+writeTable();
 
 $("form").on("submit", function (event) {
-  event.preventDefault();
-  let dados = obterDados();
+    event.preventDefault();
+    let dice = getDice();
 
-  if ($("#add").is(":visible")) {
-    pessoas.push(dados);
+    if ($("#add").is(":visible")) {
+        people.push(dice);
 
-    console.log("Added");
-  } else {
-    pessoas[pessoas.indexOf(update)] = dados;
-    $("#add").toggle();
-    $("#update").toggle();
-    console.log("Updated");
-  }
-  escreverTabela();
-  $("#clean").click();
+        console.log("Added");
+    } else {
+        people[people.indexOf(update)] = dice;
+        $("#add").toggle();
+        $("#update").toggle();
+        console.log("Updated");
+    }
+    writeTable();
+    $("#clean").click();
 });
 
 $("#clean").on("click", function () {
-  $("#add").show();
-  $("#update").hide();
+    $("#add").show();
+    $("#update").hide();
 });
 
-function obterDados() {
-  let nome = $("#nome").val();
-  let idade = $("#idade").val();
-  let cidade = $("#cidade").val();
+function getDice() {
+    let name = $("#name").val();
+    let age = $("#age").val();
+    let city = $("#city").val();
 
-  return {
-    nome: nome,
-    idade: idade,
-    cidade: cidade,
-  };
+    return {
+        name: name,
+        age: age,
+        city: city,
+    };
 }
 
-function escreverTabela() {
-  $("tbody").empty();
+function writeTable() {
+    $("tbody").empty();
 
-  pessoas.forEach((pessoa) => {
-    $("tbody").append(
-      $("<tr>").append(
-        $("<td>", { text: pessoa.nome }),
-        $("<td>", { text: pessoa.idade }),
-        $("<td>", { text: pessoa.cidade }),
-        $("<td>").append(
-          $("<button>", {
-            text: "Edit",
-            class: "btn btn-outline-primary",
-            click: function () {
-              update = pessoa;
-              $("#nome").val(pessoa.nome);
-              $("#idade").val(pessoa.idade);
-              $("#add").toggle();
-              $("#update").toggle();
-            },
-          }),
-          $("<button>", {
-            text: "Delete",
-            class: "btn btn-outline-danger",
-            click: function () {
-              pessoas.splice(pessoas.indexOf(pessoa), 1);
-              escreverTabela();
-            },
-          })
-        )
-      )
-    );
-  });
+    people.forEach((person) => {
+        $("tbody").append(
+            $("<tr>").append(
+                $("<td>", { text: person.name }),
+                $("<td>", { text: person.age }),
+                $("<td>", { text: person.city }),
+                $("<td>").append(
+                    $("<button>", {
+                        text: "Edit",
+                        class: "btn btn-outline-primary",
+                        click: function () {
+                            update = person;
+                            $("#name").val(person.name);
+                            $("#age").val(person.age);
+                            $("#add").toggle();
+                            $("#update").toggle();
+                        },
+                    }),
+                    $("<button>", {
+                        text: "Delete",
+                        class: "btn btn-outline-danger",
+                        click: function () {
+                            people.splice(people.indexOf(person), 1);
+                            writeTable();
+                        },
+                    })
+                )
+            )
+        );
+    });
 }

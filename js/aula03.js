@@ -1,66 +1,67 @@
+console.warn("R E A D")
+let leitura = document.getElementById("paragrafo_ler");
 
-console.waXrn("CREATE");
-
-console.group("inserindo conteudo")
-let novo_elemento = document.createElement("i")
-novo_elemento.innXXXXXerHTML="Elemento I criado com javascript "
-document.body.append(novo_elemento)
- 
-console.groupEnd()
-
-
-
-console.warn("READ");
-console.group("Ler documento de forma unitária por id")
-
-
-let leitura = document.getElementById("p_ler").textContent
 console.log(leitura);
-console.groupEnd()
+
+console.log("Apenas o conteúdo ou textContent", leitura.textContent);
+
+console.log("Apenas o coneúdo + elementos internos com HTML", leitura.innerHTML);
+
+let btn_aqui = document.getElementById("ta_aqui")
+console.log(btn_aqui);
+
+console.log("Botao localizado ou textContent", btn_aqui.textContent);
+console.log("Botao localizado com sucesso ou textContent", btn_aqui.innerHTML);
 
 
+console.warn("READ MORE");
+let paragrafos = [...document.getElementsByTagName("p")];
+console.log("Lendo todos osparagrafos", paragrafos );
 
-console.group("Ler documento em grupo por seletor")
-let paragrafos =[...document.getElementsByTagName('p')]; 
-console.log("Leitura dos paragrafos",typeof(paragrafos),paragrafos); 
-console.groupEnd()
-
-
-console.group("Percorrendo a lista um por 1"); 
 paragrafos.forEach(paragrafo => {
     console.log(paragrafo.textContent);
 });
-console.groupEnd()
+
+console.warn("write");
+let escrita = document.getElementById("paragrafo_escrever");
+escrita.title = "www.google.com";
+escrita.textContent = "Esse paragrafo foi escrito com javascript";
+
+document.getElementById("ta_aqui").textContent = "Botão alterado com js";
+
+let mudar_texto = document.getElementById("alterar_1");
+mudar_texto.title = "O span mudou cara";
+mudar_texto.textContent = "Span has changed again"
+
+let mudar_texto2 = document.getElementById("alterar_2");
+mudar_texto2.title = "Será que mudou?";
+mudar_texto2.textContent = "Mudou mesmo!"
+
+function mudarTexto(conteudo){
+    let elemento = document.getElementById("qualquer");
+
+    elemento.title = conteudo;
+    elemento.textContent = conteudo;
+}
 
 
-console.group("Ler documento em grupo por class")
-let mesma_class =[...document.getElementsByClassName('btn')]; 
-console.log("Leitura dos elementos com mesma class",typeof(mesma_class),mesma_class); 
-console.groupEnd()
+function addConteudo(conteudo){
+    let enter = document.createElement("br");
 
+    document.body.append(enter);
 
-console.group("Percorrendo a lista um por 1 e mostrando o textConten"); 
-mesma_class.forEach(item => {
-    console.log(item.textContent);
-});
-console.groupEnd()
+    let elemento = document.createElement("div");
+    elemento.textContent = conteudo;
 
+    document.body.append(elemento);
+}
 
-console.group("Percorrendo a lista um por 1 e mostrando o innerHTML"); 
-mesma_class.forEach(item => {
-    console.log(item.innerHTML);
-});
-console.groupEnd()
+function addBtn(nomeBtn){
+    let enter = document.createElement("br");
+    document.button.append(enter);
 
-console.warn("UPDATE");
-
-console.group("Atualizando o conteudo")
-document.getElementById("p_escrever").textContent="Esse paragrafo foi escrico com  document.getElementById('p_escrever').textContent='' "
-console.groupEnd()
-
-
-
-
-
-
+    let textoBtn = document.createElement("title");
+    textoBtn.textContent = nomeBtn;
+    document.button.append(textoBtn);
+}
 

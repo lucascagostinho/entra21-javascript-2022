@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 04 - Manipulando HTML com jQuery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-
+    
 </head>
 
 <body>
@@ -21,9 +21,27 @@
                     <div class="row">
 
                         <h1 class="text-center fw-bolder">Aulas JavaScript</h1>
+                        <h2 class="text-center fw-bolder">A menor parte está no console</h2>
                     </div>
+                    <p id="paragrafo_1">Parágrafo será lido por jQuery</p>
+                    <p id="paragrafo_2"></p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
 
+                    <button onclick="criarLinha()">Clique aqui para incluir uma linha nova no body</button>
+    
+                    <button id="excluirLinhas">Clique aqui para excluir todas as linhas geradas</button>
                     
+                
+                <button id="add" class="btn btn-success">Clique para adicionar</button>
+                
+                <button id="limpar" class="btn btn-outline-warning">Clique para limpar</button>
+
                 </div>
             </div>
         </section>
@@ -34,7 +52,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/js/simples.js"></script>
+    <script src="/js/aula04.js"></script>
 </body>
 
 </html>

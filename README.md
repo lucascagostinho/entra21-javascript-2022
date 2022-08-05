@@ -1,21 +1,25 @@
-# entra21 Javascript
-Repositório com as práticas realizadas em aula 
+# Entra21 - ☕ Full stack Java Course ☕
 
-> Conteúdo prático realizado em sala durante o projeto Entra21
-> Em aditivo oportunidades de aprendizado em:
-> - Versionamento
-> - Linguagem markdown
-> - Documentação
-![Gif Entra21](/entra21.gif)
-## Aula Ministradas
+<br>
 
-<a href="#"><img align="center" src="./giphy.gif" width="400 " height="300" /></a>
 
-| AULA | ASSUNTO |
-|------|---------|
-|Aula 01 | Introdução ao Javascript : console + variaveis + operadores
-|Aula 02 | Funções
-|Aula 03 | Acessar e manipular o document
-|Aula 04 | Acessar e manipular o document com jQuery
-|Aula 05 | Escrever páginas inteiras com jQuery
-|Aula 06 | Acessar API jQuery + Ajax 
+## 🤖Javascript 🤖
+
+![Full stack Java course](/gif_img/cover_js.png)
+
+
+<br>
+
+## Practical Content ✍🏻
+
+- [x] What's the purpose?;
+- [x] Variables;
+- [x] Data types;
+- [x] Weak typing concepts;
+- [x] Type conversion;
+- [x] Selection structure;
+- [x] Loop structure;
+- [x] Functions;
+- [ ] Functional programming;
+- [ ] Objects;
+- [ ] Working with async code.

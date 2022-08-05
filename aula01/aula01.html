@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula01</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="container">
+    <a class="btn btn-warning btn-lg" href="/index.html" role="button">Voltar</a>
+
+    <header class="row header-aula">
+        <section class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+
+                        <h1 class="text-center fw-bolder">Aulas JavaScript</h1>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="row">
+        <section class="col">
+            <div class="card">
+                <div class="card-body">
+                    <nav style="height: 400px;">
+                        <h1 class="text-center"> &#x1F631; Pressione F12 e veja a mágica acontecer &#x1F631;</h1>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        console.log("Hello World 🗺️"); // O console aceita parametros para exibir em log
+        console.log("Ariana " + 22); // É possível concatenar textos e variáveis como no java
+        console.log("Ariana", 22, "anos"); // O console aceita infinitos parametros, basta separar por virugla
+
+        let nome = "Ariana"; // let cria uma variavel com escopo limitado
+        var sobrenome = "Silva" // var cria uma variavel que continua exitindo mesmo depois do escopo
+
+        console.log(nome);
+        console.log("Meu nome é: " + nome);
+        console.log("Meu nome é ", nome);
+        console.log("Meu nome é " + nome + " mas também me chamam de 'Ari'")
+        console.log(`Meu nome é ${nome}`);
+        console.log("No momento nome é do tipo " + typeof (nome));
+        nome = 10;
+        console.log("No momento nome é do tipo " + typeof (nome));
+        nome = false;
+        console.log("No momento nome é do tipo " + typeof (nome));
+        nome = "";
+        console.log("No momento nome é do tipo " + typeof (nome));
+
+        let idade = 22;
+        let altura = 1.59;
+        console.log(`A variavel idade é do tipo ${typeof (idade)} e a varaivel altura é do tipo ${typeof (altura)}`);
+
+        // let mensagem = prompt("O que vc está pensando?")
+        // console.log("Voce está pensando " + mensagem);
+        // console.log("A informação capturada é do tipo " + typeof(mensagem));
+
+        console.log("Os operadores aritméticos são os mesmos do java + , - , * , / , %");
+        console.log("Somando " + (1 + 2));
+        console.log("Subtraindo " + (5 - 2));
+        console.log("Multiplicando " + (1 * 2));
+        console.log("Divisão " + (4 / 2));
+        console.log("Resto da divisão " + (10 / 3));
+
+        if (idade < 18) {
+            console.log("é MENOR idade!");
+        } else {
+            console.log("É maior de idade");
+        }
+
+        // let visitante = prompt("Insira seu nome:");
+        // console.log("Bem vindo " +visitante);
+
+        // let age = prompt("Insira sua idade:");
+        // console.log("Idade: " +age);
+
+        // let city = prompt("Insira sua cidade:");
+        // console.log("Cidade " +city);
+
+        // console.log("A pessoa " + visitante + " tem " + age + " de idade e mora na cidade de " + city);
+
+    </script>
+</body>
+
+</html>

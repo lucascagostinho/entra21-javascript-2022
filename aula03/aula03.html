@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 04 - Manipulando HTML com jQuery</title>
+    <title>Aula03 - Javascript</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 
 <body>
@@ -21,20 +20,29 @@
                     <div class="row">
 
                         <h1 class="text-center fw-bolder">Aulas JavaScript</h1>
+                        <h2 class="text-center fw-bolder">A menor parte está no console</h2>
                     </div>
+                    <p>Este paragrafo foi escrito com HTML</p>
+                    <p id="paragrafo_ler">Esse conteúdo está no <b>console</b></p>
+                    <p id="paragrafo_escrever"></p>
 
-                    
+                    <button id="ta_aqui" onclick="mudarTexto(prompt('que conteúdo vc quer?'))">Clique</button>
+                    <span id="alterar_1">Texto antes</span>
+                    <span id="alterar_2">Texto antes</span>
+
+                    <p id="qualquer" title="conteudo" alt="AAAAA">
+                    </p>
+                    <button onclick="addBtn(prompt('diz ai...'))">este é um botao</button>
                 </div>
             </div>
         </section>
     </header>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/js/simples.js"></script>
+    <script src="/js/aula03.js"></script>
 </body>
 
 </html>
